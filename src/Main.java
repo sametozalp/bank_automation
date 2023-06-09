@@ -8,18 +8,18 @@ public class Main {
 
         // create fonk'u kullanmadan hesap oluşturma
         /*
-         * ShortTermAccount ali = new ShortTermAccount(1000, 1);
-         * LongTermAccount veli = new LongTermAccount(3000, 2);
-         * CurrentAccount ahmet = new CurrentAccount(5000, 3);
-         * PrivateAccount mehmet = new PrivateAccount(7000, 4);
-         * 
-         * System.out.println(ali.balance);
+         * shorttermaccount ali = new shorttermaccount(1000, 1);
+         * longtermaccount veli = new longtermaccount(3000, 2);
+         * currentaccount ahmet = new currentaccount(5000, 3);
+         * privateaccount mehmet = new privateaccount(7000, 4);
+         *
+         * system.out.println(ali.balance);
          */
 
         Bank bank = new Bank();
 
         bank.createShortTermAccount(1000, 1); // kısa vadeli hesap oluştur
-        bank.createLongTermAccount(3000, 2); // uzun vadeli hesap oluştur
+        bank.createLongTermAccount(3000, 2); // uzun vadeli hesap OLUŞTUR
         bank.createCurrentAccount(5000, 3); // cari hesap oluştur
         bank.createPrivateAccount(7000, 4);// özel hesap oluştur
 
