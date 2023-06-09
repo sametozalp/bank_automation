@@ -1,7 +1,9 @@
 public class Main {
+    public static String defaultDate;
+
     public static void main(String[] args) {
 
-        String defaultDate = "05.05.2023";
+        defaultDate = "05.05.2023";
         System.out.println("Tarih: " + defaultDate);
 
         // create fonk'u kullanmadan hesap oluşturma

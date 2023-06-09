@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
 
-public class Bank {
+public class Bank extends Main {
     public static ArrayList<Map<Integer, Integer>> listID = new ArrayList<>();
     public int balance;
 
@@ -29,7 +29,7 @@ public class Bank {
                 int value = map.get(ID);
                 value = value + addBalance;
                 map.put(ID, value);
-                System.out.println("Para yatırıldı. Mevcut bakiye: " + value);
+                System.out.println("Para yatırıldı. Mevcut bakiye: " + value + " (ID: " + ID + ")");
                 break;
             }
         }
@@ -47,7 +47,7 @@ public class Bank {
                 } else {
                     value = value - subBalance;
                     map.put(ID, value);
-                    System.out.println("Para çekildi. Mevcut bakiye: " + value);
+                    System.out.println("Para çekildi. Mevcut bakiye: " + value + " (ID: " + ID + ")");
                     break;
                 }
 
@@ -60,7 +60,6 @@ public class Bank {
 
         Random random = new Random();
         int randomNumber = random.nextInt(listID.size());
-        System.out.println("rastegele numara : " + randomNumber);
         String a = listID.get(randomNumber).values().toString().substring(1,
                 listID.get(randomNumber).values().toString().indexOf("]"));
         int b = Integer.parseInt(a) + 10000;
@@ -101,7 +100,8 @@ public class Bank {
     }
 
     public void setDate(int dd, int mm, int yy) {
-        System.out.println("Tarih güncellendi: " + dd + "." + mm + "." + yy);
+        defaultDate = dd + "." + mm + "." + yy;
+        System.out.println("Tarih güncellendi: " + defaultDate);
     }
 
     public void showIDs() {
